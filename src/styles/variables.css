@@ -1,0 +1,45 @@
+/* Design Tokens — Dark Crimson & Burgundy Cinematic Palette */
+:root {
+  /* Fonts */
+  --font-display: 'Caveat', cursive, sans-serif;
+  --font-heading: 'Caveat', cursive, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Color System — Deep Space / Dark Crimson / Burgundy / Near-Black */
+  --bg-primary: #040305;
+  --bg-secondary: #0d0609;
+  --bg-panel: #14090d;
+  --bg-panel-hover: #1c0c12;
+  --bg-elevated: #240e17;
+
+  --border-dim: rgba(185, 28, 28, 0.18);
+  --border-medium: rgba(220, 38, 38, 0.35);
+  --border-bright: #b91c1c;
+
+  --accent-crimson: #e11d48;
+  --accent-red: #dc2626;
+  --accent-red-glow: rgba(185, 28, 28, 0.25);
+  --accent-red-dim: rgba(185, 28, 28, 0.08);
+
+  --status-completed: #10b981;
+  --status-completed-bg: rgba(16, 185, 129, 0.1);
+  --status-progress: #f59e0b;
+  --status-progress-bg: rgba(245, 158, 11, 0.1);
+
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --text-crimson: #fb7185;
+
+  --shadow-hud: 0 12px 40px rgba(0, 0, 0, 0.6);
+  --shadow-red: 0 0 25px rgba(185, 28, 28, 0.2);
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
