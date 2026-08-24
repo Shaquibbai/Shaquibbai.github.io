@@ -1,5 +1,8 @@
 import farmOsImg from '../../assets/farmOS/farmOS.jfif';
 import deadlineDashImg from '../../assets/Deadline_Dash/Deadline_Dash.png';
+import netflixCopyImg from '../../assets/netflix_copy/netflix_copy.png';
+import chatkorImg from '../../assets/chatkor/chatkor.png';
+import storiesImg from '../../assets/stories/stories.png';
 import shaquibProfileImg from '../../assets/profile/shaquib-profile.png';
 
 export const siteConfig = {
@@ -88,11 +91,105 @@ export const siteConfig = {
     {
       id: 'quest-01',
       code: 'PROJECT 01',
+      title: 'Netflix Copy',
+      type: 'CLASS PROJECT / LEARNING PROJECT',
+      status: 'CLASS PROJECT',
+      category: 'learning',
+      tech: ['JavaFX', 'Scene Builder', 'Eclipse', 'CSS'],
+      techDisplay: 'JavaFX / Scene Builder / Eclipse / CSS',
+      image: netflixCopyImg,
+      githubUrl: 'https://github.com/Shaquibbai',
+      demoUrl: null,
+      summary: 'A desktop clone of the Netflix application created as a class project while learning JavaFX and desktop UI layout.',
+      details: [
+        'Created as a class project exploring desktop UI development with JavaFX and Scene Builder.',
+        'Implements custom CSS styling for dark media library cards and layout organization.',
+        'Built using Eclipse IDE for Java GUI architecture fundamentals.'
+      ],
+      planetVisual: {
+        hue: 350,
+        gradient: 'radial-gradient(circle at 35% 35%, #f43f5e 0%, #be123c 55%, #4c0519 100%)',
+        glow: 'rgba(244, 63, 94, 0.4)',
+        sizeDesktop: 72,
+        moons: [
+          { name: 'JavaFX', dist: 52, speed: 22, color: '#f43f5e' },
+          { name: 'Scene Builder', dist: 70, speed: 28, color: '#fb7185' },
+          { name: 'Eclipse', dist: 86, speed: 34, color: '#e11d48' },
+          { name: 'CSS', dist: 102, speed: 40, color: '#fda4af' }
+        ]
+      }
+    },
+    {
+      id: 'quest-02',
+      code: 'PROJECT 02',
+      title: 'ChatKor',
+      type: 'CLASS PROJECT / LEARNING PROJECT',
+      status: 'CLASS PROJECT',
+      category: 'learning',
+      tech: ['JavaFX', 'Scene Builder', 'Eclipse', 'CSS'],
+      techDisplay: 'JavaFX / Scene Builder / Eclipse / CSS',
+      image: chatkorImg,
+      githubUrl: 'https://github.com/Shaquibbai',
+      demoUrl: null,
+      summary: 'A desktop messaging and chat interface created as a class project exploring JavaFX event handling and UI layout.',
+      details: [
+        'Class project built to practice event-driven JavaFX desktop application architecture.',
+        'Designed with Scene Builder layout containers and custom CSS theme styling.',
+        'Features chat window layouts, messaging controls, and UI state handlers.'
+      ],
+      planetVisual: {
+        hue: 280,
+        gradient: 'radial-gradient(circle at 35% 35%, #a855f7 0%, #7e22ce 55%, #3b0764 100%)',
+        glow: 'rgba(168, 85, 247, 0.4)',
+        sizeDesktop: 72,
+        moons: [
+          { name: 'JavaFX', dist: 52, speed: 20, color: '#c084fc' },
+          { name: 'Scene Builder', dist: 70, speed: 26, color: '#e879f9' },
+          { name: 'Eclipse', dist: 86, speed: 32, color: '#a855f7' },
+          { name: 'CSS', dist: 102, speed: 38, color: '#f0abfc' }
+        ]
+      }
+    },
+    {
+      id: 'quest-03',
+      code: 'PROJECT 03',
+      title: 'Stories',
+      type: 'CLASS PROJECT / LEARNING PROJECT',
+      status: 'CLASS PROJECT',
+      category: 'learning',
+      tech: ['JavaFX', 'Scene Builder', 'Eclipse', 'CSS'],
+      techDisplay: 'JavaFX / Scene Builder / Eclipse / CSS',
+      image: storiesImg,
+      githubUrl: 'https://github.com/Shaquibbai',
+      demoUrl: null,
+      summary: 'A story-driven desktop reader and application interface created as a class project exploring JavaFX UI composition.',
+      details: [
+        'Class project exploring interactive narrative presentation and UI composition in JavaFX.',
+        'Built using Scene Builder and Eclipse IDE with modular desktop UI design.',
+        'Demonstrates styled text views, custom navigation buttons, and CSS layouts.'
+      ],
+      planetVisual: {
+        hue: 190,
+        gradient: 'radial-gradient(circle at 35% 35%, #38bdf8 0%, #0284c7 55%, #082f49 100%)',
+        glow: 'rgba(56, 189, 248, 0.4)',
+        sizeDesktop: 72,
+        moons: [
+          { name: 'JavaFX', dist: 52, speed: 24, color: '#38bdf8' },
+          { name: 'Scene Builder', dist: 70, speed: 30, color: '#7dd3fc' },
+          { name: 'Eclipse', dist: 86, speed: 36, color: '#0284c7' },
+          { name: 'CSS', dist: 102, speed: 42, color: '#bae6fd' }
+        ]
+      }
+    },
+    {
+      id: 'quest-04',
+      code: 'PROJECT 04',
       title: 'farmOS',
       type: 'TERMINAL FARM MANAGEMENT SYSTEM',
       status: 'COMPLETED',
-      tech: ['C', 'C++'],
-      techDisplay: 'C / C++',
+      category: 'major',
+      tech: ['C', 'C++', 'CLI', 'File Systems', 'Data Management'],
+      techDisplay: 'C / C++ / CLI / File Systems',
       image: farmOsImg,
       githubUrl: 'https://github.com/sanmugdho/farmOS',
       demoUrl: null,
@@ -101,14 +198,28 @@ export const siteConfig = {
         'Built with C/C++ emphasizing structured CLI navigation and modular file processing.',
         'Provides inventory tracking, resource management, and state updates for farming workflows.',
         'Designed as a lightweight, terminal-native utility.'
-      ]
+      ],
+      planetVisual: {
+        hue: 340,
+        gradient: 'radial-gradient(circle at 35% 35%, #fb7185 0%, #e11d48 50%, #881337 85%, #4c0519 100%)',
+        glow: 'rgba(225, 29, 72, 0.5)',
+        sizeDesktop: 88,
+        moons: [
+          { name: 'C', dist: 58, speed: 18, color: '#fb7185' },
+          { name: 'C++', dist: 76, speed: 24, color: '#f43f5e' },
+          { name: 'CLI', dist: 94, speed: 30, color: '#e11d48' },
+          { name: 'File Systems', dist: 112, speed: 36, color: '#fda4af' },
+          { name: 'Data Mgt', dist: 130, speed: 42, color: '#fecdd3' }
+        ]
+      }
     },
     {
-      id: 'quest-02',
-      code: 'PROJECT 02',
+      id: 'quest-05',
+      code: 'PROJECT 05',
       title: 'Deadline Dash',
       type: '2D STORY-DRIVEN CAMPUS ADVENTURE',
       status: 'IN PROGRESS',
+      category: 'major',
       tech: ['Java', 'LibGDX', 'Tiled', 'Gradle'],
       techDisplay: 'Java / LibGDX / Tiled / Gradle',
       image: deadlineDashImg,
@@ -120,7 +231,19 @@ export const siteConfig = {
         'Uses Tiled Map Editor for detailed 2D tilemap design and collision layer creation.',
         'Features custom story-driven quest progression inspired by real-life student deadline rushes.',
         'Managed and built via Gradle tooling.'
-      ]
+      ],
+      planetVisual: {
+        hue: 45,
+        gradient: 'radial-gradient(circle at 35% 35%, #fde047 0%, #d97706 50%, #92400e 85%, #451a03 100%)',
+        glow: 'rgba(217, 119, 6, 0.5)',
+        sizeDesktop: 92,
+        moons: [
+          { name: 'Java', dist: 60, speed: 19, color: '#fde047' },
+          { name: 'LibGDX', dist: 78, speed: 25, color: '#f59e0b' },
+          { name: 'Tiled', dist: 96, speed: 31, color: '#d97706' },
+          { name: 'Gradle', dist: 114, speed: 37, color: '#fef08a' }
+        ]
+      }
     }
   ],
 

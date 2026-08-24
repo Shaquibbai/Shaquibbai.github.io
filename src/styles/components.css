@@ -286,25 +286,20 @@
   transform: translateY(-2px);
 }
 
-/* Hidden Profile Photo with Hover Fade Reveal */
+/* Hidden Profile Photo with Hover Fade Reveal (No visible box or borders when idle) */
 .photo-reveal-wrapper {
   width: 100%;
   max-width: 320px;
   height: 400px;
   border-radius: var(--radius-lg);
-  background: #0d0608;
-  border: 1px solid var(--border-medium);
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
   margin: 0 auto;
   cursor: pointer;
-  transition: border-color 0.4s ease, box-shadow 0.4s ease;
-}
-
-.photo-reveal-wrapper:hover {
-  border-color: var(--accent-crimson);
-  box-shadow: var(--shadow-red);
 }
 
 .photo-reveal-img {
@@ -312,12 +307,18 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  opacity: 0; /* Default: completely dark / hidden */
-  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0; /* Default: completely hidden secret */
+  filter: blur(4px);
+  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s ease;
+  transform: scale(0.98);
+  border-radius: var(--radius-lg);
 }
 
 .photo-reveal-wrapper:hover .photo-reveal-img {
-  opacity: 1; /* Hover: full smooth fade reveal */
+  opacity: 1; /* Smooth 450ms reveal */
+  filter: blur(0px);
+  transform: scale(1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(225, 29, 72, 0.25);
 }
 
 /* Responsive adjustments */
@@ -335,3 +336,46 @@
     font-size: 2.25rem;
   }
 }
+
+/* CV Secret Rocket Delivery Interaction */
+.cv-secret-btn:hover,
+.cv-secret-btn:focus-visible {
+  border-color: rgba(225, 29, 72, 0.75) !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 0 14px rgba(225, 29, 72, 0.4) !important;
+  transform: translateY(-1px);
+}
+
+.cv-mini-rocket-anim {
+  will-change: transform, opacity;
+}
+
+.cv-mini-rocket-anim.flying {
+  animation: cvRocketArrivalFlight 1.15s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@keyframes cvRocketArrivalFlight {
+  0% {
+    transform: translate3d(85px, 65px, 0) rotate(-135deg) scale(0.6);
+    opacity: 0;
+  }
+  20% {
+    transform: translate3d(45px, 25px, 0) rotate(-115deg) scale(0.85);
+    opacity: 1;
+  }
+  65% {
+    transform: translate3d(-10px, -18px, 0) rotate(-65deg) scale(1);
+    opacity: 1;
+  }
+  85% {
+    transform: translate3d(0, -2px, 0) rotate(-20deg) scale(0.95);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(0.9);
+    opacity: 0;
+  }
+}
+
+
+

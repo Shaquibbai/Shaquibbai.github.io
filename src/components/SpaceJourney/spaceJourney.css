@@ -1,0 +1,127 @@
+/* Space Journey Stage 1 Styling */
+
+/* Rocket floating in zero-g */
+.spacecraft-wrapper {
+  animation: spacecraftFloat 7s ease-in-out infinite alternate;
+  display: inline-flex;
+  vertical-align: middle;
+  overflow: visible;
+}
+
+.spacecraft-img {
+  width: 280px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  overflow: visible;
+  transition: width 0.3s ease;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.6));
+}
+
+@keyframes spacecraftFloat {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-2.5px) rotate(0.6deg);
+  }
+  100% {
+    transform: translateY(2px) rotate(-0.6deg);
+  }
+}
+
+/* Engine flame glow pulse */
+.engine-glow-pulse {
+  animation: enginePulse 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes enginePulse {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 0.95;
+    transform: scale(1.1);
+  }
+}
+
+/* Astronaut container styling */
+.astronaut-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 98;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.astronaut-inner-float {
+  animation: astronautMicroFloat 4s ease-in-out infinite alternate;
+}
+
+@keyframes astronautMicroFloat {
+  0% {
+    transform: translateY(-2px) rotate(-1deg);
+  }
+  100% {
+    transform: translateY(2px) rotate(2deg);
+  }
+}
+
+/* Astronaut Interactive Button Styling */
+.astronaut-button {
+  pointer-events: auto;
+  touch-action: manipulation;
+  position: relative;
+}
+
+.astronaut-button:hover {
+  filter: brightness(1.22) drop-shadow(0 0 10px rgba(225, 29, 72, 0.45));
+}
+
+.astronaut-button:hover .astronaut-svg {
+  transform: scale(1.08);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.astronaut-button:active {
+  transform: scale(0.94) translateY(-3px) !important;
+}
+
+.astronaut-button:focus-visible {
+  outline: 2px solid #e11d48 !important;
+  outline-offset: 4px;
+  border-radius: 50%;
+}
+
+/* Mobile & Touch Responsiveness */
+@media (max-width: 768px) {
+  .spacecraft-img {
+    width: 140px;
+  }
+
+  .astronaut-svg {
+    width: 36px;
+    height: 42px;
+  }
+
+  /* Ensure larger touch target on mobile */
+  .astronaut-button {
+    padding: 12px;
+    margin: -12px;
+  }
+}
+
+/* Reduced Motion Mode */
+@media (prefers-reduced-motion: reduce) {
+  .spacecraft-wrapper,
+  .engine-glow-pulse,
+  .astronaut-inner-float {
+    animation: none !important;
+  }
+
+  .astronaut-button:hover .astronaut-svg {
+    transform: none !important;
+  }
+}

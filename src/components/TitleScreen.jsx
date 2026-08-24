@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
 import { siteConfig } from '../data/portfolioData';
+import Spacecraft from './SpaceJourney/Spacecraft';
 
 export default function TitleScreen() {
   const { profile } = siteConfig;
@@ -18,7 +19,7 @@ export default function TitleScreen() {
     >
       <div className="container" style={{ textAlign: 'left' }}>
         <div className="animate-fade-in">
-          {/* Main Name in Handwritten Display Font */}
+          {/* Main Name in Handwritten Display Font + Spacecraft Anchor */}
           <h1 
             style={{ 
               fontFamily: 'var(--font-display)',
@@ -26,10 +27,19 @@ export default function TitleScreen() {
               fontWeight: 700, 
               color: 'var(--text-primary)',
               lineHeight: 1.1,
-              marginBottom: '0.25rem'
+              marginBottom: '0.25rem',
+              display: 'flex',
+              alignItems: 'center',
+              flexWrap: 'wrap',
+              justifyContent: 'space-between',
+              gap: 'clamp(2rem, 5vw, 5rem)',
+              maxWidth: '1050px'
             }}
           >
-            {profile.name}
+            <span>{profile.name}</span>
+            <div id="hero-spacecraft-anchor" style={{ display: 'inline-flex', alignItems: 'center' }}>
+              <Spacecraft />
+            </div>
           </h1>
 
           {/* Subtitle directly underneath */}

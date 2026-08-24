@@ -3,6 +3,7 @@ import './styles/global.css';
 import './styles/components.css';
 
 import MouseWaveCanvas from './components/MouseWaveCanvas';
+import SpaceJourney from './components/SpaceJourney/SpaceJourney';
 import IntroScreen from './components/IntroScreen';
 import TitleScreen from './components/TitleScreen';
 import ProfileSection from './sections/ProfileSection';
@@ -35,6 +36,9 @@ export default function App() {
     <div id="top" className="portfolio-app">
       {/* Directional Light Wave Canvas (z-index: 1) */}
       <MouseWaveCanvas />
+
+      {/* Space Journey Tethered Astronaut System */}
+      <SpaceJourney />
 
       {/* CRT Scanline overlay */}
       <div className="scanlines-overlay" />
