@@ -1,0 +1,23 @@
+:root {
+  --night: #0d0a12;
+  --aub: #1d1527;
+  --ox: #6f2639;
+  --bone: #e8dcca;
+  --bone-dim: #b9ad9b;
+  --grey: #a1a0a8;
+  --verd: #7fb3a6;
+  --verd-d: #3f6f64;
+  --lamp: #f2b35e;
+  --ink: #0b090d;
+  --paper: #e8dcca;
+  --paper-ink: #2a1d1a;
+  --display: "IM Fell English", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --caps: "IM Fell English SC", "IM Fell English", "Iowan Old Style", Georgia, serif;
+  --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --mono: "DM Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --ease: cubic-bezier(.6, .02, .2, 1);
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+}
